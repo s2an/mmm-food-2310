@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
   def index
-    @facade = SearchFacade.new(params[:name])
+    @facade = FoodFacade.new(params[:name])
   end
 end

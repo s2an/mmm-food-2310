@@ -34,7 +34,7 @@ RSpec.describe "Mid-Mod" do
       click_button("Search")
       expect(current_path).to eq("/foods")
 
-      expect(page).to contain("Total # of Foods Returned via Search:")
+      expect(page).to contain("Total Hits:")
     end
   end
 end

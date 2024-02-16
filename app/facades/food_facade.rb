@@ -10,7 +10,4 @@ class FoodFacade
     end
   end
 
-  def total_count
-
-  end
 end

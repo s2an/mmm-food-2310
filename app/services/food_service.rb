@@ -5,7 +5,7 @@ class FoodService
   end
 
   def conn
-    Faraday.new(url: "https://api.nal.usda.gov/") do |faraday|
+    Faraday.new(url: "https://api.nal.usda.gov") do |faraday|
       faraday.headers[X-Api-Key] = Rails.application.credentials.fdcentral[:key]
     end
   end
