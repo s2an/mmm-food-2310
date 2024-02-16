@@ -1,6 +1,6 @@
 class FoodFacade
-  def initialize(name)
-    @name = name
+  def initialize(query)
+    @query = query
   end
 
   def foods
@@ -11,6 +11,6 @@ class FoodFacade
   end
 
   def total_count
-    
+
   end
 end
