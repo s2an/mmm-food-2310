@@ -15,7 +15,7 @@ RSpec.describe "Mid-Mod" do
   # - The food's Brand Owner
   # - The food's ingredients
 
-    it "finds the sweet, sweet potatoes" do
+    it "visits the root, searches for sweet potatoes and goes to the foods index page" do
       visit "/"
 
       expect(current_path).to eq("/")
@@ -26,6 +26,15 @@ RSpec.describe "Mid-Mod" do
       click_button("Search")
 
       expect(current_path).to eq("/foods")
+    end
+# SearchController instead??
+    it "displays the total number of items returned" do
+      visit "/"
+      fill_in("q", with: "sweet potatoes")
+      click_button("Search")
+      expect(current_path).to eq("/foods")
+
+      expect(page).to contain("Total # of Foods Returned via Search:")
     end
   end
 end
