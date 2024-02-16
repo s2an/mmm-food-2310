@@ -1,5 +1,5 @@
 class Food
-  attr_reader :name
+  attr_reader :description
 
   def initialize(attributes)
     @description = attributes[:description]
