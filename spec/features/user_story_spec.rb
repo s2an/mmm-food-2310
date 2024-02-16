@@ -29,6 +29,10 @@ RSpec.describe "Mid-Mod" do
     end
 # SearchController instead??
     it "displays the total number of items returned" do
+      json_response = File.read('spec/fixtures/sweet_potatoes.json')
+      stub_request(:get, "https://api.nal.usda.gov/fdc/v1/foods/search?=sweetpotatoes")
+        .to_return(status: 200, body: json_response)
+# require "pry"; binding.pry
       visit "/"
       fill_in("q", with: "sweet potatoes")
       click_button("Search")
