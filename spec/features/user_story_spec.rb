@@ -23,7 +23,7 @@ RSpec.describe "Mid-Mod" do
       expect(page).to have_button("Search")
 
       fill_in("q", with: "sweet potatoes")
-      # click_button("Search")
+      click_button("Search")
     end
   end
 end
